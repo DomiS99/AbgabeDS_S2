@@ -13,23 +13,9 @@ namespace MonsterFarmExtended
         {
 
             Intro();
-            Console.WriteLine($"Do you want to reload the last game (r) or create a new hero (n){Environment.NewLine}" +
-                $"Attention the last hero will be deleted if you create a new one!");
-            string RoN = Console.ReadLine();
-            if (RoN == "r")
-            {
-                Hero Player = SaveAndLoadHero.Load();
-                Console.ReadLine();
-                SaveAndLoadHero.Save(Player.Name, Player.Age, Player.Damage, Player.Healthpoints, Player.XP);
-            }
-            else if (RoN == "n")
-            {
-                Hero Player = CreateHero();
-                Console.ReadLine();
-                SaveAndLoadHero.Save(Player.Name,Player.Age,Player.Damage,Player.Healthpoints,Player.XP);
-            }
-            else
-            { Console.WriteLine("Wrong entry!"); }
+            Hero Player = Load();
+
+            SaveAndLoadHero.Save(Player.Name,Player.Age,Player.Damage,Player.Healthpoints,Player.XP);
         }
 
         public static void Intro()
@@ -51,6 +37,29 @@ namespace MonsterFarmExtended
                 $"{NewHero.Name} is currently {NewHero.Age} Years old. {Environment.NewLine}Your Hero is currently at full Health which is {NewHero.Healthpoints}{Environment.NewLine}" +
                 $"You currently have {NewHero.XP} Experience. Therfor your current Level is {NewHero.Level.LevelInt}");
             return NewHero;
+
+        }
+
+        public static Hero Load()
+        {
+
+            Console.WriteLine($"Do you want to reload the last game (r)? {Environment.NewLine}" +
+            $"Attention the last hero will be deleted if you create a new one!");
+            string RoN = Console.ReadLine();
+                if (RoN == "r")
+                {
+                    Hero Player = SaveAndLoadHero.Load();
+                    Console.ReadLine();
+                    return Player;
+                }
+                else
+                {
+                    Hero Player = CreateHero();
+                    Console.ReadLine();
+                    return Player;
+                }
+
+
 
         }
     }

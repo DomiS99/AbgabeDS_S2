@@ -18,6 +18,8 @@ namespace MonsterFarmExtended
             Monster monster = CreateMonster();
             Battle(monster, Player);
             Console.WriteLine(Player.XP);
+            Console.WriteLine(Player.Damage);
+            Console.WriteLine(Player.Healthpoints);
             SaveAndLoadHero.Save(Player.Name,Player.Age,Player.Damage,Player.Healthpoints,Player.XP);
         }
 
@@ -36,10 +38,10 @@ namespace MonsterFarmExtended
             Console.WriteLine("What's your Name again?");
             string name = Console.ReadLine();
             Hero NewHero = new Hero(name);
-            //NewHero.GetLevel(NewHero);
+            NewHero.GetLevel(NewHero);
             Console.WriteLine($"Your Hero {NewHero.Name} has been born. {Environment.NewLine}" +
                 $"{NewHero.Name} is currently {NewHero.Age} Years old. {Environment.NewLine}Your Hero is currently at full Health which is {NewHero.Healthpoints}{Environment.NewLine}" +
-                $"You currently have {NewHero.XP} Experience. Therfor your current Level is ");
+                $"You currently have {NewHero.XP} Experience. Therfor your current Level is {NewHero.Level.LevelInt}");
             return NewHero;
 
         }
@@ -98,6 +100,7 @@ namespace MonsterFarmExtended
                 }
             }
             monster.GetXP(hero);
+
 
         }   
     }

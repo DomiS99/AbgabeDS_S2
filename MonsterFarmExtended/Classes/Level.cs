@@ -21,6 +21,7 @@ namespace MonsterFarmExtended.Classes
             {
                 Level Counter = hero.Level;
                 this.LevelInt = 1;
+                this.Multiplicator = 1;
                 return Counter;
             }
             else if (hero.XP > 500 || hero.XP <= 1500)
@@ -55,6 +56,7 @@ namespace MonsterFarmExtended.Classes
             {
                 Level Counter = hero.Level;
                 this.LevelInt = 69;
+                this.Multiplicator = 3;
                 return Counter;
             }  
 

@@ -9,7 +9,7 @@ namespace MonsterFarmExtended.Classes
 {
     public abstract class Creatures
     {
-        public int Healthpoints { get; set; }
+        public double Healthpoints { get; set; }
 
         public int Age { get; set; }
         public bool IsAlive { get; set; }

@@ -9,7 +9,7 @@ namespace MonsterFarmExtended.Classes
     public class Enemy : Creatures
     {
         public int EnemyXP;
-        public int Damage { get; set; }
+        public double Damage { get; set; }
         public Enemy () : base(80)
         {
             this.EnemyXP = 50;

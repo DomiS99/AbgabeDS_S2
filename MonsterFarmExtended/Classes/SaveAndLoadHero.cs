@@ -11,7 +11,7 @@ namespace MonsterFarmExtended.Classes
 {
     public class SaveAndLoadHero
     {
-        public static void Save(string name, int age, int damage, int healthpoints, int xp)
+        public static void Save(string name, int age, double damage, double healthpoints, int xp)
         {
             List<Hero> list = new List<Hero>();
             list.Add(new Hero(name)

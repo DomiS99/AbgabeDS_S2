@@ -14,6 +14,7 @@ namespace MonsterFarmExtended.Classes
         public double Damage { get; set; }
         public List<Item> Inventory { get; set; }
         public Level Level { get; set; }
+
         public Hero (string name): base(100)
         {
             this.Name = name;
@@ -32,7 +33,7 @@ namespace MonsterFarmExtended.Classes
         }
         public Level GetLevel(Hero hero)
         {
-            this.Level = new Level(hero);
+            this.Level = new Level(hero,hero.Name);
             Hero UpdatedStats = StatUpdate(hero);
             return Level;
         }

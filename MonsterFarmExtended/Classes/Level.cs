@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace MonsterFarmExtended.Classes
 {
-    public class Level
+    public class Level : Hero
     {
         public int LevelInt { get; set; }
         public double Multiplicator { get; set; }
 
-        public Level(Hero hero)
+        public Level(Hero hero,string name) : base(name)
         {
             LevelCounter(hero);
         }

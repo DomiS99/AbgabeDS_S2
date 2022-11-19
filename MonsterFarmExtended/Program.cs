@@ -14,7 +14,10 @@ namespace MonsterFarmExtended
 
             Intro();
             Hero Player = Load();
-
+            Console.WriteLine("You have encountered your first Enemy. Its a Monster.");
+            Monster monster = CreateMonster();
+            Battle(monster, Player);
+            Console.WriteLine(Player.XP);
             SaveAndLoadHero.Save(Player.Name,Player.Age,Player.Damage,Player.Healthpoints,Player.XP);
         }
 
@@ -30,12 +33,13 @@ namespace MonsterFarmExtended
 
         public static Hero CreateHero()
         {
+            Console.WriteLine("What's your Name again?");
             string name = Console.ReadLine();
             Hero NewHero = new Hero(name);
-            NewHero.GetLevel(NewHero);
+            //NewHero.GetLevel(NewHero);
             Console.WriteLine($"Your Hero {NewHero.Name} has been born. {Environment.NewLine}" +
                 $"{NewHero.Name} is currently {NewHero.Age} Years old. {Environment.NewLine}Your Hero is currently at full Health which is {NewHero.Healthpoints}{Environment.NewLine}" +
-                $"You currently have {NewHero.XP} Experience. Therfor your current Level is {NewHero.Level.LevelInt}");
+                $"You currently have {NewHero.XP} Experience. Therfor your current Level is ");
             return NewHero;
 
         }
@@ -58,9 +62,43 @@ namespace MonsterFarmExtended
                     Console.ReadLine();
                     return Player;
                 }
-
-
-
         }
+
+        public static Monster CreateMonster()
+        {
+            Monster monster = new Monster();
+            return monster;
+        }
+
+        public static void Battle(Enemy monster, Hero hero)
+        {
+
+            Console.WriteLine($"An epic battle begins");
+            int roundcounter = 0;
+            for (double i = monster.Healthpoints; i > 0; i++)
+            {
+                if (monster.Healthpoints > 0)
+                {
+                    roundcounter = roundcounter + 1;
+                    Console.WriteLine($"Round: {roundcounter}");
+                    hero.Attack(monster);
+                    hero.AbsorbDamage(monster);
+                    if (monster.Healthpoints < 0)
+                    {
+                        monster.Healthpoints = 0;
+                    }
+                    Console.WriteLine($"Stats after Round {roundcounter}: {Environment.NewLine}Hero HP: {hero.Healthpoints} {Environment.NewLine} Monster HP: {monster.Healthpoints}");
+                    Console.ReadLine();
+                }
+
+                else
+                {
+                    Console.WriteLine($"The Monster is Dead");
+                    break;
+                }
+            }
+            monster.GetXP(hero);
+
+        }   
     }
 }

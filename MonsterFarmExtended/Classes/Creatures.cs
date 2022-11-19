@@ -16,16 +16,16 @@ namespace MonsterFarmExtended.Classes
         public int XP { get; set; }
 
 
-        public Creatures(int healthpoints)
+        public Creatures(double hp)
         {
-            this.Healthpoints = healthpoints;
+            this.Healthpoints = hp;
             Random r = new Random();
             this.Age = r.Next(20, 40);
             this.IsAlive = true;
             this.XP = 0;
 
         }
-        public void Die ()
+        public void Die()
         {
             this.Healthpoints = 0;
         }

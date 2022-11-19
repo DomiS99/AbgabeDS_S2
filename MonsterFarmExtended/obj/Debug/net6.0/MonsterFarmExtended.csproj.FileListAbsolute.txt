@@ -1,0 +1,15 @@
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\bin\Debug\net6.0\MonsterFarmExtended.exe
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\bin\Debug\net6.0\MonsterFarmExtended.deps.json
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\bin\Debug\net6.0\MonsterFarmExtended.runtimeconfig.json
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\bin\Debug\net6.0\MonsterFarmExtended.dll
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\bin\Debug\net6.0\MonsterFarmExtended.pdb
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.csproj.AssemblyReference.cache
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.AssemblyInfoInputs.cache
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.AssemblyInfo.cs
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.dll
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\refint\MonsterFarmExtended.dll
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.pdb
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\MonsterFarmExtended.genruntimeconfig.cache
+C:\Users\domin\source\repos\AbgabeDS_S2\MonsterFarmExtended\obj\Debug\net6.0\ref\MonsterFarmExtended.dll
